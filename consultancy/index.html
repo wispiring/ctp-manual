@@ -14,14 +14,19 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-4" style="height:800px;">
-                <iframe src="../catalog/consultancy.html" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
+            <div class="col-md-4 col-sm-4">
+                <iframe src="../catalog/consultancy.html" onload="fixFrameLength(this)" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
             </div>
-            <div class="col-md-8 col-sm-8" style="height:1700px;">
-                <iframe src="../common/introduction.html" name="right" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
+            <div class="col-md-8 col-sm-8">
+                <iframe src="../common/introduction.html" onload="fixFrameLength(this)" name="right" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
             </div>
         </div>
     </div>
+    <script>
+    function fixFrameLength(element) {
+        element.style.height = (element.contentWindow.document.body.scrollHeight+50)+'px';
+    }
+    </script>
 </body>
 
 </html>
