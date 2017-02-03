@@ -8,17 +8,22 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script>
+    function fixFrameLength(element) {
+        element.style.height = (element.contentWindow.document.body.scrollHeight+50)+'px';
+    }
+    </script>
     <title>北京市清洁生产管理系统使用手册</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-sm-4" style="height:800px;">
-                <iframe src="../catalog/applicant.html" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
+            <div class="col-lg-3 col-md-4 col-sm-4">
+                <iframe src="../catalog/applicant.html" onload="fixFrameLength(this)" frameborder="0" scrolling="no" width="100%"></iframe>
             </div>
-            <div class="col-md-8 col-sm-8" style="height:1700px;">
-                <iframe src="../common/introduction.html" name="right" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
+            <div class="col-lg-9 col-md-8 col-sm-8">
+                <iframe src="../common/introduction.html" onload="fixFrameLength(this)" name="right" frameborder="0" scrolling="no" width="100%"></iframe>
             </div>
         </div>
     </div>

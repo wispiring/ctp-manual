@@ -1,0 +1,9 @@
+p:not(.alert){
+    text-indent: 2em;
+}
+img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    padding: 10px 0 10px 0;
+}
